@@ -16,13 +16,13 @@ I want you to create a solar-system simulation where you can add planets and, of
 
 * From past class discussions, here is an example of the parts of speech extracted from the paragraph above.
 
-| Nouns        | Adjectives          | Verbs |
-| :---         | :----:              | ---:  |
-| Planet       | mass                | move  |
-| Simulation   | distance            | set   |
-| Solar System | position/coordinate | get   |
-| Sun          | velocity            | add   |
-| Gravity      | name                | show  |
+| Nouns        | Adjectives          |       Verbs |
+| :---         | :----:              |------------:|
+| Planet       | mass                |      Create |
+| Simulation   | distance            |         ADD |
+| Solar System | position/coordinate |        Move |
+| Sun          | velocity            |        Show |
+| Gravity      | name                |     Located |
 
 * From the noun extraction, you will create Java classes for: Planet, Sun, Solar System, and Simulation
 * When you apply the adjectives to the nouns they describe and/or look for object relationships in the nouns, you'll end up with something like this:
