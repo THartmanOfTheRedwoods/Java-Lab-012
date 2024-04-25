@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Coordinate {
+    double x;
+    double y;
+
+    public Coordinate(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+class CelestialBody {
+    String name;
+    double mass; // in kilograms
+    double size; // in meters
+    Coordinate position;
+    double distanceFromSun; // in meters
+
+    public CelestialBody(String name, double mass, double size, Coordinate position) {
+        this.name = name;
+        this.mass = mass;
+        this.size = size;
+        this.position = position;
+        this.distanceFromSun = Math.sqrt(position.x * position.x + position.y * position.y);
+    }
+
+    public void move(Coordinate newPosition) {
+        this.position = newPosition;
+        this.distanceFromSun = Math.sqrt(position.x * position.x + position.y * position.y);
+    }
+}
+
+class Sun extends CelestialBody {
+    public Sun(String name, double mass, double size) {
+        super(name, mass, size, new Coordinate(0.0, 0.0)); // Sun is at the center (0, 0)
+    }
+}
+
+class Planet extends CelestialBody {
+    public Planet(String name, double mass, double size, Coordinate position) {
+        super(name, mass, size, position);
+    }
+
+    public void setVelocity(double velocityX, double velocityY) {
+        // Code to set velocity
+    }
+}
+
+class SolarSystem {
+    Sun sun;
+    List
