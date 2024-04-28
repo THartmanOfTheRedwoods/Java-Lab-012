@@ -4,6 +4,10 @@
 
 * In this part, we are going to learn to translate written English into the classes and objects that we'll need to build. Read the Paragraph below, and write down all the **NOUNS**, then re-read the paragraph and write down all the **ADJECTIVES**, and finally select all the **VERBS**. When done, move on to **Part 2**.
 
+1. Nouns: Solar system, planet, sun, coordinate, mass, size, distance, velocity
+2. Adjectives: solar, central, celestial, orbiting, coordinate, massive, relative, simulated
+3. Verbs: create, move, show, set 
+
 I want you to create a solar-system simulation where you can add planets and, of course, a sun. The simulation should be able to move the planets with respect to the sun's mass and size and, of course, gravity. The simulation should also be able to show where each planet is located at any given period. The Sun should be the center of the solar-system, so coordinate (0.0, 0.0). Each Planet should also have a coordinate position (hopefully not at 0.0, 0.0), a mass and size, and at any point I want to know its distance from its sun. Lastly, because this is a simulation, we should be able to move the planet and get and set its position and velocity.
 
 ## Part 2 - Class/Object Determination
