@@ -6,6 +6,11 @@
 
 I want you to create a solar-system simulation where you can add planets and, of course, a sun. The simulation should be able to move the planets with respect to the sun's mass and size and, of course, gravity. The simulation should also be able to show where each planet is located at any given period. The Sun should be the center of the solar-system, so coordinate (0.0, 0.0). Each Planet should also have a coordinate position (hopefully not at 0.0, 0.0), a mass and size, and at any point I want to know its distance from its sun. Lastly, because this is a simulation, we should be able to move the planet and get and set its position and velocity.
 
+ Nouns: solar system, planets, sun, simulation, mass, size, gravity, coordinate, position, period, center, distance, velocity
+
+Adjectives: solar, planetary, given, coordinate
+
+Verbs: add, move, show, located, should be, have, know, set, get**
 ## Part 2 - Class/Object Determination
 
 * From your extraction of **NOUNS**, **ADJECTIVES**, and **VERBS** from the paragraph in Part 1, let's have a class discussion to decide what classes, objects, and actions are necessary for our simulation.
@@ -90,6 +95,21 @@ classDiagram
       +getMass() double
       +toString() String
     }
+
+'''
+Planet
+Attributes: name (String), radius (double), mass (double), distance (double), x (double), y (double), velX (double), velY (double)
+Methods: getXPos(), getYPos(), moveTo(double newX, double newY), getXVel(), getYVel(), setXVel(double newVelX), setYVel(double newVelY), toString()
+Sun
+Attributes: name (String), radius (double), mass (double), temp (double), x (double), y (double)
+Methods: getXVel(), getYVel(), getMass(), toString()
+SolarSystem
+Attributes: planets (List<Planet>), theSun (Sun)
+Methods: SolarSystem(), addPlanet(Planet planet), addSun(Sun sun), showPlanets(), movePlanets()
+Simulation
+Attributes: None
+Methods: main(String[] args)
+
 ```
 
 <object data="solarsystemsim.svg" width="700" height="700"> </object>
